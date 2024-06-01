@@ -1,0 +1,354 @@
+:root{
+    --corPrincipal:#e84393;
+    --corSecundaria: rgba(75, 73, 77, 0.363);
+    --text-Principal:#dfe6e9;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+   background-color: black; 
+   
+}
+
+
+header h1{
+    text-align: center;
+    font-size: 55px;
+    color: var(--text-Principal);
+    margin-top: 40px;
+}
+header span{
+    color: var(--corPrincipal);
+}
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    
+}
+section{
+    display: flex;
+    margin-top: 100px;
+    height: 50vh;
+    padding: 20px 0px;
+    gap: 40px;
+
+    
+}
+.section-text h3, h2{
+    color: var(--text-Principal);
+}
+.section-text h2{
+    font-size: 45px;
+    margin-top: 20px;
+}
+.section-text h3{
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+button{
+    width: 400px;
+    height: 60px;
+    align-items: center;
+    padding: 10px 30px;
+    font-size: 30px;
+    color: var(--text-Principal);
+    text-transform: uppercase; 
+    margin-top: 45px; 
+    border-radius: 5px;
+    position: relative;
+    transition: 0.5ms;
+    background-color: transparent;
+    border: none;
+    border: 2px solid var(--corPrincipal);
+    cursor: pointer;
+}
+button::before{
+    content: '';
+    bottom: 0px;
+    left: 0px;
+    border-radius: 5px;
+    position: absolute;
+    width: 0px;
+    height: 60px;
+    z-index:  -1;
+    transition: 1s;
+    background-color:blueviolet;
+}
+button:hover:before{
+   width: 100%; 
+}
+
+.section-foto img{
+    width: 500px;
+    height: auto;
+    border-radius: 5px;    
+}
+.section-cards{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   margin-top: 100px;
+    
+}
+.card-text h2{
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.cards{
+    display: flex;
+    flex-direction: row;   
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(214, 30, 168, 0.822);
+    margin-left: 5px;
+    margin: auto;
+    font-size: 25px;
+    color: var(--text-Principal);
+    position: relative;
+    transition: 0.5ms;
+    cursor: pointer;
+    
+    
+}
+.card::before{
+    content: '';
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    width: 0px;
+    height: 250px;
+    z-index: -1;
+    transition: 1s;
+    background-color: var(--corPrincipal);
+    
+}
+.card:hover:before{
+    width: 100%;
+}
+.bi-suit-heart{
+    font-size: 40px;
+}
+
+.section-main{
+    background-color:var(--corSecundaria);
+    height: 78vh;
+    padding: 16px;
+    margin-top: 100px;
+    
+}
+
+.section-text-2{
+    gap: 30px;
+    
+}
+.section-text-2 h2{
+    font-size: 65px;
+    text-transform: uppercase;
+    
+}
+.section-text-2 h3{
+    font-size: 25px;
+    color:var(--text-Principal);
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+
+.section-foto-2 img{
+    width: 390px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.section-text-2 button{
+    background-color:rgba(214, 30, 168, 0.822) ;
+    border: none;
+    outline: none;
+}
+.section-form-primary{
+    margin-bottom: 100px;
+}
+
+.section-form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: var(--corSecundaria);
+    padding: 40px;
+    width: 100%;
+    
+}
+.section-form form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;  
+}
+
+.section-form input{
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.section-form button{
+    width: 100%;
+}
+
+footer{
+    background-color: rgb(51, 49, 49);
+    height: 10vh;
+    color: var(--text-Principal);
+    text-align: center;
+    padding: 10px;
+}
+
+
+@media (max-width:768px){
+    .container{
+        max-width: 90%;
+    }
+    header h1{
+        font-size: 30px;
+        
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        height: 50vh;
+        padding: 20px 0px;
+        gap: 40px;    
+    }
+    .section-text h2{
+        font-size: 35px;
+        margin-top: 20px;
+    }
+    .section-text h3{
+        font-size: 20px;
+        font-weight: normal;
+        letter-spacing: 0px;
+        
+    }
+    button{
+        width: 100%;
+        height: 60px;
+        align-items: center;
+        padding: 10px 30px;
+        font-size: 30px;
+        color: var(--text-Principal);
+        text-transform: uppercase; 
+        margin-top: 45px; 
+        border-radius: 5px;
+        position: relative;
+        transition: 0.5ms;
+        background-color: transparent;
+        border: none;
+        border: 2px solid var(--corPrincipal);
+        cursor: pointer;
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }
+    .section-foto img{
+        width: 100%;
+       
+        
+    }
+
+    .section-cards{
+        margin-top: 600px
+      
+            
+     }
+     .cards{
+        display: flex;
+        flex-direction: column;
+       
+     }
+     .card-text h2{
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: 300px;
+        
+    }
+    .card{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       margin-top: 5px;
+       
+    }
+
+    .section-main{
+        max-width: 330px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 600px;
+        
+    }
+    .section-text-2{
+        gap: 30px;
+        
+    }
+    .section-text-2 h2{
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-top: 10px;
+        
+    }
+    .section-text-2 h3{
+        font-size: 16px;
+        color:var(--text-Principal);
+        text-transform: capitalize;
+        margin-top: 10px;
+    }
+    
+    
+    .section-foto-2 img{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        display: flex;
+        
+    }
+    .section-text-2 button{
+        font-size: 25px;
+        margin-bottom: 5px;
+        margin-top: 16px;
+    }
+    .section-form{
+    margin-bottom: 500px; 
+    padding: 16px; 
+       
+}
+footer{
+    font-size: 10px;
+
+}
+}
+
+
+
+
+
+   
+
